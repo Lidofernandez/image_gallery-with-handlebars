@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fun with animals</title>
+
+<!-- include our libraries and css files -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/handlebars-v3.0.3.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="AnimalsData.js"></script>
+<script src="scripts.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="#" id="albums-tab">Albums</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- /Navbar -->
+
+<!-- Breadcrumbs -->
+
+<div class="container">
+  <ol class="breadcrumb">
+    <li>
+      <a href="#">
+        Albums
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        Animals
+      </a>
+    </li>
+    <li class="active">
+      Animal's name
+    </li>
+  </ol>
+  <div id="content"  class="container-fluid"  role="main">
+  </div>
+</div>
+
+<!-- /Breadcrumbs -->
+
+  <script id="albums-template" type="text/x-handlebars-template">
+    <div class="row">
+      {{#each category}}
+      <div class="col-xs-12 col-md-3">
+        <div class="album-thumbnail"  data-id="{{@index}}">
+          <img class="image-responsive" src="{{animals.[0].image1}}" alt=""/>
+          <div class="caption">
+            <h4>{{name}}</h4>
+            <p>{{animals.length}} Animals</p>
+          </div>
+        </div>
+      </div> <!-- / col -->
+      {{/each}}
+    </div> <!-- / row -->
+  </script>
+
+</body>
+</html>

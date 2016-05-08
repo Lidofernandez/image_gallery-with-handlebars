@@ -4,11 +4,12 @@
 // (plus a name and a thumbnail image)
 // The photos contain an image src and some metadata
 
-var animals_data = {
+var animalsData = {
 	category : [
 		{
 			name : "Reptiles",
-			animals : [
+			animals :
+			[
 				{
 					image1 : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Coast_Garter_Snake.jpg/500px-Coast_Garter_Snake.jpg",
 					image2 : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Nerodia_sipedon_shedding.JPG/440px-Nerodia_sipedon_shedding.JPG",
